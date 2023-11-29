@@ -1,7 +1,8 @@
 {
   "expo": {
+    "jsEngine": "hermes",
     "name": "Routes",
-    "slug": "Routes",
+    "slug": "routes",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -15,16 +16,36 @@
       "**/*"
     ],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.alise11.routes"
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "package": "com.alise11.routes"
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "extra": {
+      "eas": {
+        "projectId": "45b3db84-6f63-46c1-b36e-c424de22691b"
+      }
+    },
+    "plugins": [
+      [
+        "@rnmapbox/maps",
+        {
+          "RNMapboxMapsImpl": "mapbox",
+          "RNMapboxMapsDownloadToken": "sk.eyJ1IjoiYWxpc2ExMSIsImEiOiJjbG95NmE2dG4wMHg0MnJwYzlkMHdsYWUxIn0.3fRvHJwMGG4De7FGOeHqlA"
+        } ], [ "expo-location",
+        {
+          "locationWhenInUsePermission": "Show current location on map."
+        }] 
+      ]
+        ,
+    "owner": "alise11"
   }
 }
